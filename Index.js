@@ -18,6 +18,9 @@ mongoose
   .catch((err) => console.log(err));
 app.use(cors());
 app.use(express.json());
+app.get("/",(req,res)=>{
+  res.send("WELCOME TO EMART SERVER")
+})
 app.use("/users", userRoute);
 app.use("/auths", auth);
 app.use("/products", product);
